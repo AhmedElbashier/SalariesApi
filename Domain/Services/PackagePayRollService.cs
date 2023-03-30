@@ -12,7 +12,7 @@ namespace SalariesApi.Domain.Services
         List<PackagePayRollDto> GetALl();
         PackagePayRoll CreatePackagePayRoll(PackagePayRollDto PackagePayRollDto);
         List<PackagePayRoll> GetPackagePayRollById(int PackagePayRollId);
-        List<PackagePayRoll> GetPackagePayRollByIdAndMonth(string PackageId, string PayRollMonth);
+        List<PackagePayRoll> GetPackagePayRollByIdAndMonthYear(string PackageId, string PayRollMonth, string PayRollYear);
 
     }
     public class PackagePayRollService : IPackagePayRollService
@@ -30,9 +30,9 @@ namespace SalariesApi.Domain.Services
             return _PackagePayRollRepository.GetPackagePayRoll(id);
         }
 
-        public List<PackagePayRoll> GetPackagePayRollByIdAndMonth(string PackageId, string PayRollMonth)
+        public List<PackagePayRoll> GetPackagePayRollByIdAndMonthYear(string PackageId, string PayRollMonth, string PayRollYear)
         {
-            return _PackagePayRollRepository.GetPackagePayRollByIdAndMonth(PackageId,PayRollMonth);
+            return _PackagePayRollRepository.GetPackagePayRollByIdAndMonthYear(PackageId,PayRollMonth,PayRollYear);
         }
         public List<PackagePayRoll> GetPackagePayRollById(int PackagePayRollId)
         {

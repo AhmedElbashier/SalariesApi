@@ -13,7 +13,7 @@ namespace SalariesApi.Domain.Repositories
         PayRoll CreatePayRoll(PayRollDto PayRollDto);
         PayRollDto ToPayRollDto(PayRoll PayRoll);
         PayRoll GetPayRoll(int id);
-        List<PayRoll> GetPayRollByIdAndMonth(string EmpId, string Month);
+        List<PayRoll> GetPayRollByIdAndMonthYear(string EmpId, string Month, string Year);
     }
 
     public class PayRollRepository : IPayRollRepository
@@ -73,6 +73,8 @@ namespace SalariesApi.Domain.Repositories
                 DeportationExpense = PayRollDto.DeportationExpense,
                 EmpType = PayRollDto.EmpType,
                 Valid = PayRollDto.Valid,
+                BookAndResearch = PayRollDto.BookAndResearch,
+
             };
         }
 
@@ -108,14 +110,16 @@ namespace SalariesApi.Domain.Repositories
                 DeportationExpense = PayRoll.DeportationExpense,
                 EmpType = PayRoll.EmpType,
                 Valid = PayRoll.Valid,
+                BookAndResearch = PayRoll.BookAndResearch,
+
 
             };
         }
-         public List<PayRoll> GetPayRollByIdAndMonth(string EmpId,string Month)
+         public List<PayRoll> GetPayRollByIdAndMonthYear(string EmpId, string Month,string Year)
         {
         
             return _context.PayRolls.Where(x =>
-                x.EmpId==EmpId&& x.Month==Month).ToList();
+                x.EmpId==EmpId&& x.Month==Month&&x.Year ==Year).ToList();
 
         }
           public PayRoll GetPayRoll(int id)

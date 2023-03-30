@@ -44,10 +44,10 @@ namespace SalariesApi.Domain.Controllers
             return Ok(PackagePayRoll);
         }
         
-        [HttpGet("ByIdAndMonth/{PackageId}/{PayRollMonth}")]
-        public IActionResult GetPackagePayRollByIdAndMonth(string PackageId,string PayRollMonth)
+        [HttpGet("ByIdAndMonth/{PackageId}/{PayRollMonth}/{PayRollYear}")]
+        public IActionResult GetPackagePayRollByIdAndMonthYear(string PackageId,string PayRollMonth,string PayRollYear)
         {
-            var PayRoll =  _PackagePayRollService.GetPackagePayRollByIdAndMonth(PackageId,PayRollMonth);
+            var PayRoll =  _PackagePayRollService.GetPackagePayRollByIdAndMonthYear(PackageId,PayRollMonth,PayRollYear);
             return Ok(PayRoll);
         }
         [HttpGet("ById/{PackagePayRollId}")]

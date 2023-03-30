@@ -184,5 +184,99 @@ namespace SalariesApi.Domain.Helpers
         public string DeportationExpense { get; set; }
         public string EmpType { get; set; }
         public string Valid { get; set; }
+        public string BookAndResearch {get; set;}
+
+    }
+    public class AbsenceDto
+    {
+        public int Id { get; set; }
+        public string EmpId { get; set; }
+        public string Name { get; set; }
+        public string Month { get; set; }
+        public string Year { get; set; }
+        public string Hours { get; set; }
+    }
+    public class AdvanceDto
+    {
+        public int Id { get; set; }
+        public string EmpId { get; set; }
+        public string EmpName { get; set; }
+        public string Period { get; set; }
+        public string StartMonth { get; set; }
+        public string EndMonth { get; set; }
+        public string Amount { get; set; }
+        public string Debit { get; set; }
+        public string Credit { get; set; }
+        public string PeriodLeft { get; set; }
+    }
+    public class AllowanceDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Percentage { get; set; }
+    }
+    public class RoleDto
+    {
+        public int Id { get; set; }
+        public bool AcademicEmp { get; set; }
+        public bool AdminEmp { get; set; }
+        public bool AcademicPayRoll { get; set; }
+        public bool AdminPayRoll { get; set; }
+        public bool PackagePayRoll { get; set; }
+        public bool TrainingPayRoll { get; set; }
+        public bool Reports { get; set; }
+        public bool Absence { get; set; }
+        public bool Advance { get; set; }
+        public bool Partial { get; set; }
+        public bool Settings { get; set; }
+    }
+    public class PartialPayRollDto
+    {
+        public int Id { get; set; }
+        public string EmpName { get; set; }
+        public string EmpId { get; set; }
+        public string Year { get; set; }
+        public string Month {get; set;}
+        public string ContractValue {get; set;}
+        public string PrimarySalary {get; set;}
+        public string BookAndResearch {get; set;}
+        public string AcademicBase {get; set;}
+        public string Stamp {get; set;}
+        public string TheBaseSubjectTax {get; set;}
+        public string PersonalTax { get; set; }
+        public string FinalNetSalary {get; set;}
+        public string FinalNetSalaryBeforeDiscount {get; set;}
+        public string FinalSalaryDeduction {get; set;}
+        public string FinalSalaryAfterDeduction {get; set;}
+        public string EmployeeCost {get; set;}
+        public string StartingSalary { get; set; }
+        public string LivingExpense {get; set;}
+        public string HousingExpense {get; set;}
+        public string DeportationExpense {get; set;}
+        public string Valid {get; set;}
+    }
+    public class PartialDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Exp { get; set; }
+        public string AcademicAllowance { get; set; }
+        public string AdministrativeAssignment { get; set; }
+        public string DegreeRoller { get; set; }
+        public string ContractValue { get; set; }
+        public string PrimarySalary { get; set; }
+        public string Program { get; set; }
+        public string Department { get; set; }
+    }
+
+    public class AdvanceAccountDto
+    {
+        public int Id { get; set; }
+        public string EmpName { get; set; }
+        public string EmpId { get; set; }
+        public string FirstMonth { get; set; }
+        public string LastMonth { get; set; }
+        public string Debit { get; set; }
+        public string Credit { get; set; }
     }
 }

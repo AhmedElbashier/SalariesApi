@@ -45,6 +45,13 @@ namespace SalariesApi.Domain.Installers
             services.AddScoped<IPersonalIncomeTaxRepository, PersonalIncomeTaxRepository>();
             services.AddScoped<ITrainingRepository, TrainingRepository>();
             services.AddScoped<ITrainingPayRollRepository, TrainingPayRollRepository>();
+            services.AddScoped<IAdvanceRepository, AdvanceRepository>();
+            services.AddScoped<IAdvanceAccountRepository, AdvanceAccountRepository>();
+            services.AddScoped<IAbsenceRepository, AbsenceRepository>();
+            services.AddScoped<IAllowanceRepository, AllowanceRepository>();
+            services.AddScoped<IPartialRepository, PartialRepository>();
+            services.AddScoped<IPartialPayRollRepository, PartialPayRollRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
         }
     }
 }

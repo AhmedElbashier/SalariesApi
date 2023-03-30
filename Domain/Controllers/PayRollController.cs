@@ -44,10 +44,10 @@ namespace SalariesApi.Domain.Controllers
             return Ok(PayRoll);
         }
         
-        [HttpGet("ByIdAndMonth/{EmpId}/{Month}")]
-        public IActionResult GetPayRollByIdAndMonth(string EmpId,string Month)
+        [HttpGet("ByIdAndMonth/{EmpId}/{Month}/{Year}")]
+        public IActionResult GetPayRollByIdAndMonthYear(string EmpId,string Month,string Year)
         {
-            var PayRoll =  _PayRollService.GetPayRollByIdAndMonth(EmpId,Month);
+            var PayRoll =  _PayRollService.GetPayRollByIdAndMonthYear(EmpId,Month,Year);
             return Ok(PayRoll);
         }
             [HttpPut("{Id}")]

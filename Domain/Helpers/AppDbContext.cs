@@ -25,6 +25,13 @@ namespace SalariesApi.Domain.Helpers
         public DbSet<PayRoll> PayRolls { get; set; }
         public DbSet<Training> Trainings { get; set; }
         public DbSet<TrainingPayRoll> TrainingPayRolls { get; set; }
+        public DbSet<Advance> Advances { get; set; }
+        public DbSet<Absence> Absences { get; set; }
+        public DbSet<Allowance> Allowances { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Partial> Partials { get; set; }
+        public DbSet<PartialPayRoll> PartialPayRolls { get; set; }
+        public DbSet<AdvanceAccount> AdvanceAccounts { get; set; }
         
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

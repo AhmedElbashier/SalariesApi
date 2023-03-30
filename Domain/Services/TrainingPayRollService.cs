@@ -12,7 +12,7 @@ namespace SalariesApi.Domain.Services
         List<TrainingPayRollDto> GetALl();
         TrainingPayRoll CreateTrainingPayRoll(TrainingPayRollDto TrainingPayRollDto);
         List<TrainingPayRoll> GetTrainingPayRollById(int TrainingPayRollId);
-        List<TrainingPayRoll> GetTrainingPayRollByIdAndMonth(string TrainingId, string Month);
+        List<TrainingPayRoll> GetTrainingPayRollByIdAndMonthYear(string TrainingId, string Month, string Year);
 
     }
     public class TrainingPayRollService : ITrainingPayRollService
@@ -30,9 +30,9 @@ namespace SalariesApi.Domain.Services
             return _TrainingPayRollRepository.GetTrainingPayRoll(id);
         }
 
-        public List<TrainingPayRoll> GetTrainingPayRollByIdAndMonth(string TrainingId, string Month)
+        public List<TrainingPayRoll> GetTrainingPayRollByIdAndMonthYear(string TrainingId, string Month, string Year)
         {
-            return _TrainingPayRollRepository.GetTrainingPayRollByIdAndMonth(TrainingId,Month);
+            return _TrainingPayRollRepository.GetTrainingPayRollByIdAndMonthYear(TrainingId,Month,Year);
         }
         public List<TrainingPayRoll> GetTrainingPayRollById(int TrainingPayRollId)
         {

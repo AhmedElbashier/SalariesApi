@@ -14,7 +14,7 @@ namespace SalariesApi.Domain.Repositories
         TrainingPayRollDto ToTrainingPayRollDto(TrainingPayRoll TrainingPayRoll);
         TrainingPayRoll GetTrainingPayRoll(int id);
         List<TrainingPayRoll> GetTrainingPayRollById(int TrainingPayRollId);
-        List<TrainingPayRoll> GetTrainingPayRollByIdAndMonth(string TrainingId, string Month);
+        List<TrainingPayRoll> GetTrainingPayRollByIdAndMonthYear(string TrainingId, string Month, string Year);
 
 
 
@@ -76,11 +76,11 @@ namespace SalariesApi.Domain.Repositories
                 User= TrainingPayRoll.User,
             };
         }
-        public List<TrainingPayRoll> GetTrainingPayRollByIdAndMonth(string TrainingId, string Month)
+        public List<TrainingPayRoll> GetTrainingPayRollByIdAndMonthYear(string TrainingId, string Month, string Year)
         {
         
             return _context.TrainingPayRolls.Where(x =>
-                x.TrainingId==TrainingId&&x.Month==Month).ToList();
+                x.TrainingId==TrainingId&&x.Month==Month&&x.Year==Year).ToList();
 
         }
          public List<TrainingPayRoll> GetTrainingPayRollById(int TrainingPayRollId)

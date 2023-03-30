@@ -18,6 +18,122 @@ namespace SalariesApi.Migrations
                 .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("SalariesApi.Domain.Models.Settings.Absence", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("EmpId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Hours")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Month")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Year")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Absences");
+                });
+
+            modelBuilder.Entity("SalariesApi.Domain.Models.Settings.Advance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Amount")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EmpId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EmpName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Period")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PeriodLeft")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Advances");
+                });
+
+            modelBuilder.Entity("SalariesApi.Domain.Models.Settings.AdvanceAccount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Credit")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Debit")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EmpId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EmpName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FirstMonth")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LastMonth")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AdvanceAccounts");
+                });
+
+            modelBuilder.Entity("SalariesApi.Domain.Models.Settings.Allowance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Percentage")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Allowances");
+                });
+
             modelBuilder.Entity("SalariesApi.Domain.Models.Settings.BookAndSearch", b =>
                 {
                     b.Property<int>("Id")
@@ -325,11 +441,157 @@ namespace SalariesApi.Migrations
                     b.ToTable("PackagePayRolls");
                 });
 
+            modelBuilder.Entity("SalariesApi.Domain.Models.Settings.Partial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("AcademicAllowance")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("AdministrativeAssignment")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ContractValue")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("DegreeRoller")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Exp")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PrimarySalary")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Program")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Partials");
+                });
+
+            modelBuilder.Entity("SalariesApi.Domain.Models.Settings.PartialPayRoll", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("AcademicBase")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("BookAndResearch")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ContractValue")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("DeportationExpense")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EmpId")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EmpName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("EmployeeCost")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FinalNetSalary")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FinalNetSalaryBeforeDiscount")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FinalSalaryAfterDeduction")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FinalSalaryDeduction")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("HousingExpense")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LivingExpense")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Month")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PersonalTax")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PrimarySalary")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Stamp")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("StartingSalary")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("TheBaseSubjectTax")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Valid")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Year")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PartialPayRolls");
+                });
+
             modelBuilder.Entity("SalariesApi.Domain.Models.Settings.PayRoll", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    b.Property<string>("BookAndResearch")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<string>("DegreeRoller")
                         .IsRequired()
@@ -480,6 +742,50 @@ namespace SalariesApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PersonalIncomeTaxes");
+                });
+
+            modelBuilder.Entity("SalariesApi.Domain.Models.Settings.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Absence")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("AcademicEmp")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("AcademicPayRoll")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("AdminEmp")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("AdminPayRoll")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("Advance")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("PackagePayRoll")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("Partial")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("Reports")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("Settings")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("TrainingPayRoll")
+                        .HasColumnType("tinyint(1)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("SalariesApi.Domain.Models.Settings.StampBase", b =>

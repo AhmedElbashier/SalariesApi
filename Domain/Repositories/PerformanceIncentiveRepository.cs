@@ -51,6 +51,7 @@ namespace SalariesApi.Domain.Repositories
 
                 Name= PerformanceIncentiveDto.Name,
                 Value = PerformanceIncentiveDto.Value,
+
                 
             };
         }
@@ -68,7 +69,7 @@ namespace SalariesApi.Domain.Repositories
         {
         
             return _context.PerformanceIncentives.Where(x =>
-                x.Value==(Name)).ToList();
+                x.Name==(Name)).ToList();
 
         }
           public PerformanceIncentive GetPerformanceIncentive(int id)

@@ -32,5 +32,6 @@ namespace SalariesApi.Domain.Models.Settings
         public string DeportationExpense {get; set;}
         public string EmpType {get; set;}
         public string Valid {get; set;}
+        public string BookAndResearch {get; set;}
     }
 }

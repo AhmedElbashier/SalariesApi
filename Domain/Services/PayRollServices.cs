@@ -11,7 +11,7 @@ namespace SalariesApi.Domain.Services
         PayRoll GetPayRoll(int id);
         List<PayRollDto> GetALl();
         PayRoll CreatePayRoll(PayRollDto PayRollDto);
-        List<PayRoll> GetPayRollByIdAndMonth(string EmpId, string Month);
+        List<PayRoll> GetPayRollByIdAndMonthYear(string EmpId, string Month, string Year);
 
     }
     public class PayRollService : IPayRollService
@@ -29,9 +29,9 @@ namespace SalariesApi.Domain.Services
             return _PayRollRepository.GetPayRoll(id);
         }
 
-        public List<PayRoll> GetPayRollByIdAndMonth(string EmpId, string Month)
+        public List<PayRoll> GetPayRollByIdAndMonthYear(string EmpId, string Month, string Year)
         {
-            return _PayRollRepository.GetPayRollByIdAndMonth(EmpId,Month);
+            return _PayRollRepository.GetPayRollByIdAndMonthYear(EmpId,Month,Year);
         }
         public PayRoll CreatePayRoll(PayRollDto PayRollDto)
         {

@@ -68,7 +68,7 @@ namespace SalariesApi.Domain.Repositories
         {
         
             return _context.BookAndSearches.Where(x =>
-                x.Value==(Name)).ToList();
+                x.Name==(Name)).ToList();
 
         }
           public BookAndSearch GetBookAndSearch(int id)

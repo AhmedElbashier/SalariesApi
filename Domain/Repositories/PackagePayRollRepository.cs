@@ -14,7 +14,7 @@ namespace SalariesApi.Domain.Repositories
         PackagePayRollDto ToPackagePayRollDto(PackagePayRoll PackagePayRoll);
         PackagePayRoll GetPackagePayRoll(int id);
         List<PackagePayRoll> GetPackagePayRollById(int PackagePayRollId);
-        List<PackagePayRoll> GetPackagePayRollByIdAndMonth(string PackageId, string PayRollMonth);
+        List<PackagePayRoll> GetPackagePayRollByIdAndMonthYear(string PackageId, string PayRollMonth, string PayRollYear);
 
 
 
@@ -91,11 +91,11 @@ namespace SalariesApi.Domain.Repositories
                 Left= PackagePayRoll.Left,
             };
         }
-        public List<PackagePayRoll> GetPackagePayRollByIdAndMonth(string PackageId, string PayRollMonth)
+        public List<PackagePayRoll> GetPackagePayRollByIdAndMonthYear(string PackageId, string PayRollMonth, string PayRollYear)
         {
         
             return _context.PackagePayRolls.Where(x =>
-                x.PackageId==PackageId&&x.PayRollMonth==PayRollMonth).ToList();
+                x.PackageId==PackageId&&x.PayRollMonth==PayRollMonth&&x.PayRollYear==PayRollYear).ToList();
 
         }
          public List<PackagePayRoll> GetPackagePayRollById(int PackagePayRollId)
