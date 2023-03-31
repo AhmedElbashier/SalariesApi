@@ -54,6 +54,7 @@ namespace SalariesApi.Domain.Repositories
                 Period = AdvanceDto.Period,
                 Amount = AdvanceDto.Amount,
                 PeriodLeft = AdvanceDto.PeriodLeft,
+                PeriodTotal = AdvanceDto.PeriodTotal,
                 
             };
         }
@@ -68,6 +69,7 @@ namespace SalariesApi.Domain.Repositories
                 Period = Advance.Period,
                 Amount = Advance.Amount,
                 PeriodLeft = Advance.PeriodLeft,
+                PeriodTotal = Advance.PeriodTotal,
             };
         }
          public List<Advance> GetAdvanceByName(string Name)

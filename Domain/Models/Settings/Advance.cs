@@ -10,5 +10,6 @@ namespace SalariesApi.Domain.Models.Settings
         public string Period { get; set; }
         public string Amount { get; set; }
         public string PeriodLeft { get; set; }
+        public string PeriodTotal { get; set; }
     }
 }

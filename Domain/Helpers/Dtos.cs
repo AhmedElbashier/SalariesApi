@@ -202,12 +202,9 @@ namespace SalariesApi.Domain.Helpers
         public string EmpId { get; set; }
         public string EmpName { get; set; }
         public string Period { get; set; }
-        public string StartMonth { get; set; }
-        public string EndMonth { get; set; }
         public string Amount { get; set; }
-        public string Debit { get; set; }
-        public string Credit { get; set; }
         public string PeriodLeft { get; set; }
+        public string PeriodTotal { get; set; }
     }
     public class AllowanceDto
     {
