@@ -52,7 +52,8 @@ namespace SalariesApi.Domain.Repositories
                 Name= UserDto.Name,
                 Username = UserDto.Username,
                 Password= UserDto.Password,
-                Role = UserDto.Role
+                Role = UserDto.Role,
+                RoleId = UserDto.RoleId
                 
             };
         }
@@ -66,6 +67,8 @@ namespace SalariesApi.Domain.Repositories
                 Username = User.Username,
                 Password= User.Password,
                 Role = User.Role,
+                RoleId = User.RoleId
+
             };
         }
          public List<User> GetUserByName(string Name)
