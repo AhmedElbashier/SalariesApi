@@ -39,6 +39,8 @@ namespace SalariesApi.Domain.Installers
             services.AddScoped<IPartialService, PartialService>();
             services.AddScoped<IPartialPayRollService, PartialPayRollService>();
             services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IPartialAdvanceService, PartialAdvanceService>();
+            services.AddScoped<IPartialAdvanceAccountService, PartialAdvanceAccountService>();
         }
     }
 }

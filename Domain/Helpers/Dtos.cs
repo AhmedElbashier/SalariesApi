@@ -146,6 +146,8 @@ namespace SalariesApi.Domain.Helpers
         public string Type { get; set; }
         public string Tt { get; set; }
         public string Rate {get; set;}
+        public string AdminAssign {get; set;}
+
     }
     public class PersonalIncomeTaxDto
     {
@@ -275,5 +277,25 @@ namespace SalariesApi.Domain.Helpers
         public string LastMonth { get; set; }
         public string Debit { get; set; }
         public string Credit { get; set; }
+    }
+    public class PartialAdvanceAccountDto
+    {
+        public int Id { get; set; }
+        public string EmpName { get; set; }
+        public string EmpId { get; set; }
+        public string FirstMonth { get; set; }
+        public string LastMonth { get; set; }
+        public string Debit { get; set; }
+        public string Credit { get; set; }
+    }
+    public class PartialAdvanceDto
+    {
+        public int Id { get; set; }
+        public string EmpId { get; set; }
+        public string EmpName { get; set; }
+        public string Period { get; set; }
+        public string Amount { get; set; }
+        public string PeriodLeft { get; set; }
+        public string PeriodTotal { get; set; }
     }
 }

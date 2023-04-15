@@ -32,6 +32,8 @@ namespace SalariesApi.Domain.Helpers
         public DbSet<Partial> Partials { get; set; }
         public DbSet<PartialPayRoll> PartialPayRolls { get; set; }
         public DbSet<AdvanceAccount> AdvanceAccounts { get; set; }
+        public DbSet<PartialAdvance> PartialAdvances { get; set; }
+        public DbSet<PartialAdvanceAccount> PartialAdvanceAccounts { get; set; }
         
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

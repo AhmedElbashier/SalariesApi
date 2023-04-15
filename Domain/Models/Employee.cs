@@ -16,5 +16,6 @@ namespace SalariesApi.Domain.Models.Settings
         public string Type {get; set;}
         public string Tt {get; set;}
         public string Rate {get; set;}
+        public string AdminAssign {get; set;}
     }
 }

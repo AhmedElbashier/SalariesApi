@@ -24,9 +24,6 @@ namespace SalariesApi.Domain.Installers
                         .EnableSensitiveDataLogging()
                         .EnableDetailedErrors()
                 );
-
-
-            
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ITaxAllowanceRepository, TaxAllowanceRepository>();
             services.AddScoped<IStampSignRepository, StampSignRepository>();
@@ -52,6 +49,8 @@ namespace SalariesApi.Domain.Installers
             services.AddScoped<IPartialRepository, PartialRepository>();
             services.AddScoped<IPartialPayRollRepository, PartialPayRollRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IPartialAdvanceRepository, PartialAdvanceRepository>();
+            services.AddScoped<IPartialAdvanceAccountRepository, PartialAdvanceAccountRepository>();
         }
     }
 }
